@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            text-align: center;  
+        }
+
+        .features article {
+            background-color: #d5e9f1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .features article h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <%- include('partials/header') %>
+
+        <div class="side-menu">
+            <ul>
+                <li><a class="active" href="/index">Home</a></li>
+                <li><a href="/findDogCat">Find a Dog or Cat</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/giveaway">Have a Pet to Give Away</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/createAccount">Create Account</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h1>Welcome to Little Paws Adoption and Care</h1>
+        <h3>At Little Paws, we believe every pet deserves a loving home. Our mission is to connect 
+            adorable pets with caring families. Explore our site to find your new furry friend, 
+            learn about pet care, or find resources for rehoming a pet.</h3>
+
+            <section class="features">
+                <h2>Our Services</h2> 
+                <article>
+                    <h2>Adopt a Pet</h2>
+                    <p>Check out our selection of dogs and cats waiting for a forever home.</p>
+                    <a href="/browsePets">Browse Pets</a>
+                </article>
+                <article>
+                    <h2>Pet Care Tips</h2>
+                    <p>Learn how to take care of your new companion with our comprehensive guides.</p>
+                    <a href="/catCare">Cat Care</a> | <a href="/dogCare">Dog Care</a>
+                </article>
+                <article>
+                    <h2>Rehome a Pet</h2>
+                    <p>Need to find a new home for your pet? We can help.</p>
+                    <a href="/giveaway">Rehome Your Pet</a>
+                </article>
+            </section>
+    </div>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+    <script src="/date&time.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        h1 {
+            text-align: center; 
+        }
+        dt {
+            font-weight: bold;
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <%- include('partials/header') %>
+
+        <div class="side-menu">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/findDogCat">Find a Dog/Cat</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/giveaway">Have a Pet to Give Away</a></li>
+                <li><a class="active" href="/contact">Contact Us</a></li>
+                <li><a href="/createAccount">Create Account</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h1>Contact Us</h1>
+
+        <dl>
+            <dt>Name</dt>
+            <dd>Yisca Perez</dd>
+            <dt>Student ID</dt>
+            <dd>40180546</dd>
+            <dt>Email</dt>
+            <dd>yisper7@gmail.com</dd>
+        </dl>
+    </div>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+    <script src="/date&time.js"></script>
+</body>
+</html>

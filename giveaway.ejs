@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-bottom: 50px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form select, form input[type="text"], form input[type="email"], form textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        form input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        form button {
+            width: auto;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        form button[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        form button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <%- include('partials/header') %>
+
+    <div class="side-menu">
+        <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/findDogCat">Find a Dog/Cat</a></li>
+            <li><a href="/catCare">Cat Care</a></li>
+            <li><a href="/dogCare">Dog Care</a></li>
+            <li><a class="active" href="/giveaway">Have a Pet to Give Away</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/createAccount">Create Account</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="main-content">
+    <h1>Have a Pet to Give Away</h1>
+
+    <form id="giveaway-pet-form" action="#" method="post">
+        <label for="pet-type">Cat or Dog:</label>
+        <select id="pet-type" name="pet_type">
+            <option value="" selected>Select...</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+        </select>
+    
+        <label for="breed">Breed (include mix breed if applicable):</label>
+        <select id="breed" name="breed">
+            <option value="" selected>Select...</option>
+            <option value="golden_retriever">Golden Retriever</option>
+            <option value="german_shepherd">German Shepherd</option>
+            <option value="bulldog">Bulldog</option>
+            <option value="siamese_cat">Siamese Cat</option>
+            <option value="sphynx_cat">Sphynx Cat</option>
+            <option value="mix_breed">Mix Breed</option>
+            <option value="other">Other</option>
+        </select>
+    
+        <label for="age">Age of Animal:</label>
+        <select id="age" name="age">
+            <option value="" selected>Select...</option>
+            <option value="puppy_kitten">Puppy/Kitten</option>
+            <option value="young">Young</option>
+            <option value="adult">Adult</option>
+            <option value="senior">Senior</option>
+        </select>
+    
+        <label for="gender">Animal Gender:</label>
+        <select id="gender" name="gender">
+            <option value="" selected>Select...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    
+        <label for="comment">Compatibility:</label>
+        <label>
+            <input type="checkbox" name="gets_along_dogs" value="yes">
+            Gets along with other dogs
+        </label>
+    
+        <label>
+            <input type="checkbox" name="gets_along_cats" value="yes">
+            Gets along with other cats
+        </label>
+    
+        <label>
+            <input type="checkbox" name="suitable_for_children" value="yes">
+            Good with small children
+        </label>
+    
+        <label for="pet-name">Animal's Name:</label>
+        <input type="text" id="pet-name" name="pet_name" required> 
+    
+        <label for="owner-family-name">Owner's Family Name:</label>
+        <input type="text" id="owner-family-name" name="owner_family_name">
+    
+        <label for="owner-given-name">Owner's Given Name:</label>
+        <input type="text" id="owner-given-name" name="owner_given_name">
+    
+        <label for="owner-email">Owner's Email:</label>
+        <input type="email" id="owner-email" name="owner_email">
+    
+        <label for="comment">Comments about the Animal:</label>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+    
+        <div id="form-error" class="form-error" style="display: none; color: red;">
+            Please fill out all fields and provide a valid email.
+        </div>
+    
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </form>
+
+</div>
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+<script src="/giveaway-form-validation.js"></script>
+<script src="/date&time.js"></script>
+</body>
+</html>

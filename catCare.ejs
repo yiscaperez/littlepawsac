@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        h1 {
+            text-align: center; 
+        }
+        dt {
+            font-weight: bold;
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <%- include('partials/header') %>
+
+        <div class="side-menu">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/findDogCat">Find a Dog/Cat</a></li>
+                <li><a class="active" href="/catCare">Cat Care</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/giveaway">Have a Pet to Give Away</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/createAccount">Create Account</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h1>Cat Care</h1>
+
+        <h3>Bringing a kitten into your family for the first time is incredibly exciting. 
+            Your new family member will be a source of love, companionship and bring you a 
+            lot of joy as they grow into an adult cat. But in order to have a good experience, 
+            there are a few things that you need to make sure you have in place to ensure their 
+            arrival goes as smoothly as possible. 
+        </h3>
+        
+        <dl>
+            <dt>1. Food and Water</dt>
+            <dd>Provide a balanced diet suitable for your cat's age, size, and breed.</dd>
+            <dd>Ensure fresh, clean water is always available.</dd>
+            <dt>2. Litter Box</dt>
+            <dd>Provide a clean litter box in a quiet, accessible location.</dd>
+            <dd>Scoop the litter box daily and change the litter regularly.</dd>
+            <dt>3. Grooming</dt>
+            <dd>Brush your cat's coat regularly to prevent matting and reduce shedding.</dd>
+            <dd>Trim their nails, clean their ears, and brush their teeth regularly.</dd>
+            <dt>4. Healthcare</dt>
+            <dd>Schedule regular check-ups with a veterinarian and keep up with vaccinations.</dd>
+            <dd>Stay alert for signs of illness or discomfort and address them promptly.</dd>
+            <dt>5. Exercise and Play</dt>
+            <dd>Provide toys and opportunities for play to keep your cat active and mentally stimulated.</dd>
+            <dd>Set aside time for interactive play sessions to bond with your cat.</dd>
+            <dt>6. Scratching Posts</dt>
+            <dd>Provide scratching posts to satisfy your cat's natural urge to scratch and to protect your furniture.</dd>
+            <dt>7. Safety</dt>
+            <dd>Provide a safe environment by removing hazards and securing windows and balconies.</dd>
+            <dd>Use a collar with an ID tag and consider microchipping your cat for identification.</dd>
+            <dt>8. Love and Attention</dt>
+            <dd>Spend quality time with your cat to build a strong bond.</dd>
+            <dd>Provide a comfortable and cozy sleeping area.</dd>
+            <dt>9. Routine</dt>
+            <dd>Establish a routine for feeding, grooming, and playtime to help your cat feel secure and well-behaved.</dd>
+            <dd>Be consistent with rules and training to avoid confusion.</dd>
+            <dt>10. Emergency Preparedness</dt>
+            <dd>Have a plan in place for emergencies, including evacuation routes and a list of emergency contacts.</dd>
+            <dd>Keep a first aid kit for pets and know basic pet first aid procedures.</dd>
+          </dl>
+
+    </div>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+    <script src="/date&time.js"></script>
+</body>
+</html>

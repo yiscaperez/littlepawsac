@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>findDogCat</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            text-align: center; 
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-bottom: 50px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        form button {
+            width: auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 10px; 
+        }
+
+        form button[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        form button:hover {
+            opacity: 0.8;
+        }
+
+        #compatibility {
+            margin-bottom: 20px; 
+        }
+
+        #compatibility label {
+            display: inline-block;
+            margin-right: 10px; 
+        }
+
+        #compatibility input[type="checkbox"] {
+            vertical-align: middle; 
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <%- include('partials/header') %>
+
+        <div class="side-menu">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a class="active" href="/findDogCat">Find a Dog/Cat</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/giveaway">Have a Pet to Give Away</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/createAccount">Create Account</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-content">
+    <h1>Find Dog/Cat</h1>
+
+    <section aria-label="Pet Search Form">
+        <form id="find-pet-form" action="#" method="post">
+            <label for="pet-type">Cat or Dog:</label>
+            <select id="pet-type" name="pet_type">
+                <option value="" disabled selected>Select...</option>
+                <option value="cat">Cat</option>
+                <option value="dog">Dog</option>
+            </select>
+        
+            <label for="breed">Breed (doesn't matter if unsure):</label>
+            <select id="breed" name="breed">
+                <option value="" disabled selected>Select...</option>
+                <option value="breed1">Breed 1</option>
+                <option value="breed2">Breed 2</option>
+                <option value="na">Doesn't matter</option>
+            </select>
+        
+            <label for="age">Preferred Age:</label>
+            <select id="age" name="age">
+                <option value="" disabled selected>Select...</option>
+                <option value="puppy_kitten">Puppy/Kitten</option>
+                <option value="young">Young</option>
+                <option value="adult">Adult</option>
+                <option value="senior">Senior</option>
+                <option value="na">Doesn't matter</option>
+            </select>
+        
+            <label for="gender">Preferred Gender:</label>
+            <select id="gender" name="gender">
+                <option value="" disabled selected>Select...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="na">Doesn't matter</option>
+            </select>
+        
+            <label>Compatibility:</label>
+            <div id="compatibility">
+                <input type="checkbox" id="dogs" name="compatibility" value="dogs">
+                <label for="dogs">Gets along with other dogs</label><br>
+                <input type="checkbox" id="cats" name="compatibility" value="cats">
+                <label for="cats">Gets along with other cats</label><br>
+                <input type="checkbox" id="children" name="compatibility" value="children">
+                <label for="children">Good with small children</label>
+            </div>
+        
+            <div id="form-error" class="form-error" style="display: none; color: red;">
+                Please fill out all fields.
+            </div>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+    </section>
+
+</div>
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+
+    <script src="/form-validation.js"></script>
+    <script src="/date&time.js"></script>
+</body>
+</html>

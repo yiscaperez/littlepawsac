@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        h1 {
+            text-align: center; 
+        }
+        dt {
+            font-weight: bold;
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <%- include('partials/header') %>
+
+        <div class="side-menu">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/findDogCat">Find a Dog/Cat</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/giveaway">Have a Pet to Give Away</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a class="active" href="/createAccount">Create Account</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h1>Create Account</h1>
+
+        <form action="/createAccount" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required pattern="[A-Za-z0-9]+">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{4,}">
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+
+        <footer>
+            <%- include('partials/footer') %>
+        </footer>
+    
+        <script src="/accountHandling.js"></script>
+        <script src="/date&time.js"></script>
+    </body>
+    </html>
